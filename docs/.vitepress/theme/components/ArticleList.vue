@@ -5,6 +5,7 @@ import { useBrowserLocation } from "@vueuse/core";
 import { data } from "../posts.data.js";
 import { useCurrentCategoryKey, useCurrentPageKey } from "../configProvider";
 import ArticleCard from "./ArticleCard.vue";
+import Artalk from 'artalk'
 
 const route = useRoute();
 const router = useRouter();
@@ -128,7 +129,14 @@ const nextPage = () => {
 
 const fetchArticleListHits = async () => {
   try {
-    const response = await fetch(`https://st.luolei.org/ga`);
+    Artalk.loadCountWidget({
+      server: 'https://artalk.qooo.tech',
+      site: '好奇心inside',
+      pvEl: '.artalk-pv-count',
+      countEl: '.artalk-comment-count',
+      statPageKeyAttr: 'data-page-key',
+    })
+    const response = await fetch(`http://api-local.aila.site/artalk/page/pvs`);
     const { data } = await response.json();
     data.forEach((item) => {
       const post = posts.value.find((p) => p.url === item.page);

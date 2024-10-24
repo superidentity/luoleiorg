@@ -9,7 +9,7 @@ export const categoryMap = [
   {
     text: "zuoluotv",
     name: "视频",
-    isHome: true,
+    isHome: false,
   },
   {
     text: "code",

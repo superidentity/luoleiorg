@@ -33,23 +33,23 @@ export function getFaviconUrl(domain: string) {
 }
 
 export function getOriginalImage(url: string) {
-  return `https://img.is26.com/${url}`;
+  return `${url}`;
 }
 
 export function getPreviewImage(url: string) {
-  return `https://img.is26.com/${url}/w=800`;
+  return `${url}`;
 }
 
 export function getBannerImage(url: string) {
-  return `https://img.is26.com/${url}/w=800`;
+  return `${url}?x-oss-process=image/resize,w_800,limit_0`;
 }
 
 export function getArticleLazyImage(url: string) {
-  return `https://img.is26.com/${url}/w=1200`;
+  return `${url}?x-oss-process=image/resize,w_1200,limit_0`;
 }
 
 export function getArticleBlurImage(url: string) {
-  return `https://img.is26.com/${url}/w=800,blur=10`;
+  return `${url}?x-oss-process=image/resize,w_800,limit_0/blur,r_10,s_10`;
 }
 
 export function getFormatNumber(num: number) {

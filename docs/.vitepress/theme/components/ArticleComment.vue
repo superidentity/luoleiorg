@@ -27,12 +27,12 @@
 
   function getArtalkConfByPage(page: any) {
     // 这里待处理成配置
-    const baseDomain = "https://luolei.org";
+    const baseDomain = "https://qooo.tech";
     return {
       pageKey: `${baseDomain}${location.pathname}/`,
       pageTitle: page.title,
-      server: "https://artalk.is26.com",
-      site: "罗磊的独立博客",
+      server: "https://artalk.qooo.tech",
+      site: "好奇心inside",
     };
   }
 

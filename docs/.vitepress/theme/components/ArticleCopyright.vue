@@ -11,15 +11,15 @@
   const categories = computed(() => frontmatter.value.categories);
 
   const authorLink = computed(() => {
-    return `https://luolei.org`;
+    return `https://qooo.tech`;
   });
 
   const articleGithubLink = computed(() => {
-    return ` https://github.com/foru17/luoleiorg/tree/main/docs/${route.path}.md`;
+    return ` https://github.com/qoopp/luoleiorg/tree/main/docs/${route.path}.md`;
   });
 
   const articleLink = computed(() => {
-    return `https://luolei.org${route.path}`;
+    return `https://qooo.tech${route.path}`;
   });
 
   onMounted(() => {});
@@ -52,7 +52,7 @@
               class="text-blue-600 dark:text-blue-300 hover:text-blue-500"
               rel="noreferrer"
               target="_blank">
-              罗磊
+              木亦
             </a>
           </span>
         </div>

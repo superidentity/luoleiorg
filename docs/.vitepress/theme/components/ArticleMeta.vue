@@ -21,7 +21,7 @@
   const fetchPageHits = async () => {
     try {
       const response = await fetch(
-        `http://api-local.aila.site/artalk/page/pv?page=${route.path}`
+        `https://api.qooo.tech/artalk/stat/pv?page=${route.path}`
       );
       const { data } = await response.json();
       const currentPageHit = data.find(

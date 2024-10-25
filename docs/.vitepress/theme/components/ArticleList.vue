@@ -136,7 +136,7 @@ const fetchArticleListHits = async () => {
       countEl: '.artalk-comment-count',
       statPageKeyAttr: 'data-page-key',
     })
-    const response = await fetch(`http://api-local.aila.site/artalk/page/pvs`);
+    const response = await fetch(`https://api.qooo.tech/artalk/stat/pvs`);
     const { data } = await response.json();
     data.forEach((item) => {
       const post = posts.value.find((p) => p.url === item.page);

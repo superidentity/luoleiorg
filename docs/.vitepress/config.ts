@@ -4,12 +4,6 @@ import { rss } from "./genFeed";
 
 import markdownImagePlugin from "./markdownPlugin";
 
-const RSS: RSSOptions = {
-  title: "好奇心inside",
-  baseUrl: `https://qooo.tech`,
-  copyright: "Copyright (c) 好奇心inside",
-  filename: "rss.xml",
-};
 
 export default defineConfig({
   title: "好奇心inside",
@@ -48,6 +42,7 @@ export default defineConfig({
     [
       "script",
       {
+        // 使用谷歌分析
         async: "",
         src: "https://www.googletagmanager.com/gtag/js?id=GTM-TZLMSZFS",
       },
@@ -55,7 +50,10 @@ export default defineConfig({
     [
       "script",
       {},
-      "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'GTM-TZLMSZFS');",
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GTM-TZLMSZFS');`
     ],
   ],
   transformHead: ({ pageData }) => {
@@ -93,3 +91,10 @@ export default defineConfig({
     },
   },
 });
+
+const RSS: RSSOptions = {
+  title: "好奇心inside",
+  baseUrl: `https://qooo.tech`,
+  copyright: "Copyright (c) 好奇心inside",
+  filename: "rss.xml",
+};
